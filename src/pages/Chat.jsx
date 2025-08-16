@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { io } from 'socket.io-client';
 import { Send } from 'lucide-react';
 
-const socket = io('http://localhost:3000'); // change if deployed
+const socket = io('https://netflix-socket-tq7e.onrender.com'); // change if deployed
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);

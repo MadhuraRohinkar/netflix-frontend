@@ -24,7 +24,7 @@ const LoginPage = () => {
 
   const handleVerifyOtp = async () => {
     try {
-      const res = await axios.post(`${variables.BACKEND_URL}:4000/api/v1/verify-Otp`, {
+      const res = await axios.post(`${variables.BACKEND_URL}/api/v1/verify-Otp`, {
         email,
          otp,
       });

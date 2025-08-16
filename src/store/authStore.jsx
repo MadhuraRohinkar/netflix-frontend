@@ -9,7 +9,7 @@ const useAuthStore = create((set) => ({
 
   verifyOtp: async (email, otp, navigate) => {
     try {
-      const res = await axios.post(`${variables.BACKEND_URL}/api/v1/verify-Otp`, {
+      const res = await axios.post(`${variables.BACKEND_URL}/verify-Otp`, {
         email,
         otp, // ✅ Make sure key matches backend
       });

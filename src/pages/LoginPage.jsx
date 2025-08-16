@@ -14,7 +14,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-        await axios.post(`${variables.BACKEND_URL}/api/v1/login`, { email });
+        await axios.post(`${variables.BACKEND_URL}/login`, { email });
         setShowOtpInput(true); // Show OTP field on same page
         setShowSignUp(false);
     } catch (error) {
@@ -24,7 +24,7 @@ const LoginPage = () => {
 
   const handleVerifyOtp = async () => {
     try {
-      const res = await axios.post(`${variables.BACKEND_URL}/api/v1/verify-Otp`, {
+      const res = await axios.post(`${variables.BACKEND_URL}/verify-Otp`, {
         email,
          otp,
       });
